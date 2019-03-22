@@ -9,10 +9,10 @@ public class Main {
 
         User loggedInUser = null;
 
-        // Create an empty list to hold users
+
         List <User> listOfUsers = new ArrayList<>();
 
-        // Add 3 users to the list
+        //создаем список пользователей
         listOfUsers.add(new User("terapist1","password1"));
         listOfUsers.add(new User("terapist2","password2"));
         listOfUsers.add(new User("terapist3","password3"));
@@ -25,14 +25,14 @@ public class Main {
         listOfUsers.add(new User("oculist2","password5"));
         listOfUsers.add(new User("oculist3","password6"));
 
-
+        System.out.println("Здравствуйте,зарегистрируйтесь или войдите в систему");
         Scanner k=new Scanner(System.in);
         System.out.println("Введите логин");
         String username=k.next();
 
         Scanner d=new Scanner(System.in);
         System.out.println("Введите пароль");
-        int password=d.nextInt();
+        String password=d.next();
 
 
         for (User user : listOfUsers)
@@ -47,8 +47,21 @@ public class Main {
                 }
             }
         }
+        if (loggedInUser != null)
+        {
+            System.out.println("User successfully logged in: "+loggedInUser.getUsername());
+        }
+        else
+        {
+            System.out.println("Invalid username/password combination or you can register");
+            System.out.println("Введите пароль");
+            Scanner c=new Scanner(System.in);
+            String password1=c.next();
 
-
-
+            listOfUsers.add(new User("User",password1));
+            System.out.println("Запомни логин");
+        }
     }
 }
+
+
