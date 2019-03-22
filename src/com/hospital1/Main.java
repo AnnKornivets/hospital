@@ -54,11 +54,11 @@ public class Main {
         else
         {
             System.out.println("Invalid username/password combination or you can register");
-            System.out.println("Введите пароль");
+            System.out.println("Введите логин");
             Scanner c=new Scanner(System.in);
-            String password1=c.next();
+            String username1=c.next();
 
-            listOfUsers.add(new User("User",password1));
+            listOfUsers.add(new User(username1,"password"));
             System.out.println("Запомни логин");
         }
     }
