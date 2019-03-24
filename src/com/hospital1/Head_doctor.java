@@ -19,5 +19,4 @@ public class Head_doctor extends User {
     }
 
 
-
 }

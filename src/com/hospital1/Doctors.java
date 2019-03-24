@@ -1,15 +1,19 @@
 package com.hospital1;
 
 
-public class Doctors {
+public class Doctors extends User {
     String nameDoctor;
     Speciality specialty;
 
+    Doctors(String username, String password) {
+        super(username, password);
+    }
+
 
     public class Speciality{
-       private String terapist="terapist";
-       private String surgeon ="sergery";
-       private String oculist="oculist";
+       private String terapist;
+       private String surgeon;
+       private String oculist;
 
     }
 
@@ -29,9 +33,16 @@ public class Doctors {
         this.specialty = specialty;
     }
 
-    public void read(){
-
-
+    @Override
+    String getUsername() {
+        return super.getUsername();
     }
+
+    @Override
+    String getPassword() {
+        return super.getPassword();
+    }
+
+
 
 }
