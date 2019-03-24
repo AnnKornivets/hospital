@@ -1,14 +1,15 @@
 package com.hospital1;
 
+
 public class Doctors {
     String nameDoctor;
     Speciality specialty;
 
 
     public class Speciality{
-        String terapist="terapist";
-        String surgeon ="sergery";
-        String oculist="oculist";
+       private String terapist="terapist";
+       private String surgeon ="sergery";
+       private String oculist="oculist";
 
     }
 
@@ -28,7 +29,7 @@ public class Doctors {
         this.specialty = specialty;
     }
 
-    public void readPrescription(){
+    public void read(){
 
 
     }

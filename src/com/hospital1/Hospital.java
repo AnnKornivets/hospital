@@ -1,7 +1,9 @@
 package com.hospital1;
 
-public class Hospital {
-    public void start(){
+public class Hospital  {
 
+private Patients[] patiens=new Patients[15];
+private Admin administrator;
+private Head_doctor head_doctor;
     }
-}
+

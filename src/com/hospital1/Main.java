@@ -59,7 +59,7 @@ public class Main {
             String username1=c.next();
 
             listOfUsers.add(new User(username1,"password"));
-            System.out.println("Запомни логин");
+
         }
     }
 }
