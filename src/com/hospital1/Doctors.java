@@ -43,6 +43,13 @@ public class Doctors extends User {
         return super.getPassword();
     }
 
+    @Override
+    public void setUsername(String username) {
+        super.setUsername(username);
+    }
 
-
+    @Override
+    public void setPassword(String password) {
+        super.setPassword(password);
+    }
 }

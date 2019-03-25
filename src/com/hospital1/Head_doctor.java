@@ -7,7 +7,6 @@ public class Head_doctor extends User {
         super(username, password);
     }
 
-
     @Override
     String getUsername() {
         return super.getUsername();
@@ -18,5 +17,13 @@ public class Head_doctor extends User {
         return super.getPassword();
     }
 
+    @Override
+    public void setUsername(String username) {
+        super.setUsername(username);
+    }
 
+    @Override
+    public void setPassword(String password) {
+        super.setPassword(password);
+    }
 }

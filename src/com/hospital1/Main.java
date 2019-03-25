@@ -9,6 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
         Hospital hospital=new Hospital();
+        Admin admin=new Admin("Марина","Ihatethiswork");
+        Head_doctor head_doctor=new Head_doctor("Рита","solidaritywithMaria");
 
         User loggedInUser = null;
 
@@ -16,17 +18,22 @@ public class Main {
         List <User> listOfUsers = new ArrayList<>();
 
         //создаем список пользователей
-        listOfUsers.add(new User("terapist1","password1"));
-        listOfUsers.add(new User("terapist2","password2"));
-        listOfUsers.add(new User("terapist3","password3"));
+        //врачи
+//терапевт
+        listOfUsers.add(new User("doctor_terapist","password1"));
 
-        listOfUsers.add(new User("sergery1","password4"));
-        listOfUsers.add(new User("sergery2","password5"));
-        listOfUsers.add(new User("sergery3","password6"));
+//хирург
+        listOfUsers.add(new User("doctor_sergery","password4"));
 
-        listOfUsers.add(new User("oculist1","password4"));
-        listOfUsers.add(new User("oculist2","password5"));
-        listOfUsers.add(new User("oculist3","password6"));
+//окулист
+        listOfUsers.add(new User("doctor_oculist","password6"));
+
+//пациенты
+        listOfUsers.add(new User("User345","password9"));
+        listOfUsers.add(new User("User527","password10"));
+        listOfUsers.add(new User("User743","password11"));
+
+
 
         System.out.println("Здравствуйте,зарегистрируйтесь или войдите в систему");
         Scanner k=new Scanner(System.in);
@@ -53,6 +60,9 @@ public class Main {
         if (loggedInUser != null)
         {
             System.out.println("User successfully logged in: "+loggedInUser.getUsername());
+            if(username.contains("doctor")){
+                System.out.println("Вы можете просмотреть свои записи");
+            }
         }
         else
         {
